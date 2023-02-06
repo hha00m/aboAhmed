@@ -1,8 +1,8 @@
 import React from 'react'
-import { Actionsheet, Box, Button, Divider, FormControl, HStack, Icon, Image, Input, Modal, Popover, ScrollView, Switch, Text, useDisclose, VStack } from 'native-base'
-import { Octicons, MaterialCommunityIcons, Ionicons, AntDesign, MaterialIcons } from '@expo/vector-icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Pressable } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Octicons, MaterialCommunityIcons, Ionicons, AntDesign, MaterialIcons } from '@expo/vector-icons';
+import { Actionsheet, Box, Button, Divider, HStack, Icon, Image, Input, Modal, ScrollView, Switch, Text, useDisclose, VStack } from 'native-base'
 
 const CampaignDetails = () => {
     const data = {
@@ -17,16 +17,15 @@ const CampaignDetails = () => {
         img: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
     }
 
-    const {
-        isOpen,
-        onOpen,
-        onClose
-    } = useDisclose();
+    const { isOpen, onOpen, onClose } = useDisclose();
     const [modalVisible, setModalVisible] = React.useState(false);
 
     return (
         <SafeAreaView>
             <ScrollView  >
+                {/* ------------------------------------------------------- */}
+                {/* post block  */}
+                {/* ----------- */}
                 <HStack space={5} m={5} flexDirection="row-reverse" alignItems={"center"} justifyContent="space-between">
                     <HStack space={1} flexDirection="row-reverse" alignItems={"center"}>
                         <Image borderRadius={5} size="60px" source={{
@@ -48,6 +47,10 @@ const CampaignDetails = () => {
                     <AntDesign name="left" size={20} color="black" />
                 </HStack>
                 <Divider />
+
+                {/* ------------------------------------------------------- */}
+                {/* stauts block  */}
+                {/* ------------- */}
                 <HStack m={2} mx={4} justifyContent={"space-between"} flexDirection="row-reverse">
                     <HStack alignItems={"center"}>
                         <Text fontSize={16} color="coolGray.800" _dark={{
@@ -60,6 +63,10 @@ const CampaignDetails = () => {
                     </HStack>
                     <Switch size={"md"} />
                 </HStack>
+
+                {/* ------------------------------------------------------- */}
+                {/* edits & duplicate button  */}
+                {/* ------------------------- */}
                 <HStack m={3} justifyContent={"center"} space={4} >
                     <Button w={"48%"} size={"lg"} colorScheme="coolGray" leftIcon={<Icon as={MaterialCommunityIcons} name="pencil" size="sm" />}>
                         تعديل
@@ -68,12 +75,15 @@ const CampaignDetails = () => {
                         تكرار
                     </Button>
                 </HStack>
-
                 <Divider my="3" py={1} _light={{
                     bg: "muted.200"
                 }} _dark={{
                     bg: "muted.50"
                 }} />
+
+                {/* ------------------------------------------------------- */}
+                {/* date button box */}
+                {/* --------------- */}
                 <Button onPress={onOpen} mx={3} w={"20%"} size={"lg"} colorScheme="coolGray" leftIcon={<Icon as={AntDesign} name="caretdown" size="sm" />}>
                     تاريخ
                 </Button>
@@ -86,6 +96,10 @@ const CampaignDetails = () => {
                         <Actionsheet.Item onPress={onClose}>Cancel</Actionsheet.Item>
                     </Actionsheet.Content>
                 </Actionsheet>
+
+                {/* ------------------------------------------------------- */}
+                {/* results box */}
+                {/* ----------- */}
                 <Box w={"90%"} shadow={1} alignSelf="center">
                     <Text textAlign={"right"} m={4} fontSize={16} color="coolGray.800" _dark={{
                         color: 'warmGray.50'
@@ -127,6 +141,10 @@ const CampaignDetails = () => {
                 }} _dark={{
                     bg: "muted.50"
                 }} />
+
+                {/* ------------------------------------------------------- */}
+                {/* settigs box */}
+                {/* ----------- */}
                 <Box w={"98%"} shadow={1} alignSelf="center">
                     <Text textAlign={"right"} m={4} fontSize={16} color="coolGray.800" _dark={{
                         color: 'warmGray.50'
@@ -152,6 +170,7 @@ const CampaignDetails = () => {
                             <Icon m={3} as={AntDesign} name="edit" size="sm" />
                         </Pressable>
                     </HStack>
+                    <Divider w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
                     <HStack space={3} justifyContent="space-between" alignItems="center">
                         <HStack m={3} justifyContent={"center"} alignItems="center">
                             <Icon m={2} as={AntDesign} name="creditcard" size="lg" />
@@ -170,6 +189,7 @@ const CampaignDetails = () => {
                             <Icon m={3} as={AntDesign} name="edit" size="sm" />
                         </Pressable>
                     </HStack>
+                    <Divider w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
                     <HStack space={3} justifyContent="space-between" alignItems="center">
                         <HStack m={3} justifyContent={"center"} alignItems="center">
                             <Icon m={2} as={MaterialCommunityIcons} name="message-reply-text-outline" size="lg" />
@@ -184,6 +204,7 @@ const CampaignDetails = () => {
                         </HStack>
                         <Icon m={3} as={AntDesign} name="edit" size="sm" />
                     </HStack>
+                    <Divider w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
                     <HStack space={3} justifyContent="space-between" alignItems="center">
                         <HStack m={3} justifyContent={"center"} alignItems="center">
                             <Icon m={2} as={AntDesign} name="addusergroup" size="lg" />
@@ -208,6 +229,9 @@ const CampaignDetails = () => {
                     bg: "muted.50"
                 }} />
 
+                {/* ------------------------------------------------------- */}
+                {/* categories box */}
+                {/* -------------- */}
                 <Box w={"98%"} shadow={1} alignSelf="center" >
                     <Text textAlign={"right"} m={4} fontSize={16} color="coolGray.800" _dark={{
                         color: 'warmGray.50'
@@ -240,7 +264,9 @@ const CampaignDetails = () => {
                     bg: "muted.50"
                 }} />
 
-
+                {/* ------------------------------------------------------- */}
+                {/* ads box */}
+                {/* ------- */}
                 <Box w={"98%"} shadow={1} alignSelf="center">
                     <Text textAlign={"right"} m={4} fontSize={16} color="coolGray.800" _dark={{
                         color: 'warmGray.50'
@@ -275,8 +301,16 @@ const CampaignDetails = () => {
                 }} _dark={{
                     bg: "muted.50"
                 }} />
+
+                {/* ------------------------------------------------------- */}
+                {/* buttons box */}
+                {/* ----------- */}
                 <Button m={2} alignSelf="center" w={"90%"} size={"lg"} endIcon={<Icon as={AntDesign} name="save" size="sm" />}> حفظ التعديل</Button>
                 <Button m={2} colorScheme="danger" alignSelf="center" w={"90%"} size={"lg"} endIcon={<Icon as={AntDesign} name="delete" size="sm" />}>  حذف الحملة</Button>
+
+                {/* ------------------------------------------------------- */}
+                {/* modals box */}
+                {/* ---------- */}
                 <Modal isOpen={modalVisible} onClose={() => setModalVisible(false)} avoidKeyboard justifyContent="center" bottom="4" size="lg">
                     <Modal.Content>
                         <Modal.CloseButton />
