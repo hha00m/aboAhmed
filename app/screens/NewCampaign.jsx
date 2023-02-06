@@ -84,18 +84,18 @@ const NewCampaign = () => {
                     </Text>
                     <Divider mb={3} width="95%" alignSelf={"center"} />
                     <Box alignItems="center">
-                        <FormControl isRequired isInvalid w="80%" maxW="300px">
-                            <FormControl.Label>اسم الحملة</FormControl.Label>
-                            <Input placeholder="اسم الحملة" />
+                        <FormControl isRequired w="80%" maxW="300px">
+                            <FormControl.Label alignSelf={"flex-end"}>اسم الحملة</FormControl.Label>
+                            <Input textAlign={"right"} placeholder="اسم الحملة" />
                             <FormControl.HelperText leftIcon={<WarningOutlineIcon size="xs" />}>
                                 Try different from previous passwords.
                             </FormControl.HelperText>
                         </FormControl>
                         <Divider my={3} w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
 
-                        <FormControl isRequired isInvalid w="80%" maxW="300px">
-                            <FormControl.Label> محتوى الرسالة</FormControl.Label>
-                            <TextArea shadow={2} placeholder="نص الرسالة "
+                        <FormControl isRequired w="80%" maxW="300px">
+                            <FormControl.Label alignSelf={"flex-end"}> محتوى الرسالة</FormControl.Label>
+                            <TextArea placeholder="نص الرسالة "
                                 h={20} textAlign="right"
                             />
                             <FormControl.HelperText leftIcon={<WarningOutlineIcon size="xs" />}>
@@ -193,7 +193,7 @@ const NewCampaign = () => {
                                     color: date === "Max" ? 'warmGray.50' : "muted.700",
                                     fontWeight: 'medium'
                                 }} shadow={'3'} >
-                                Max
+                                6 Months
                             </Center>
                         </Pressable>
                         <Pressable
@@ -205,7 +205,7 @@ const NewCampaign = () => {
                                     color: date === "Month" ? 'warmGray.50' : 'muted.700',
                                     fontWeight: 'medium'
                                 }} shadow={'3'}>
-                                Month
+                                30 Days
                             </Center>
                         </Pressable>
                         <Pressable
@@ -217,7 +217,7 @@ const NewCampaign = () => {
                                     color: date === "Week" ? 'warmGray.50' : 'muted.700',
                                     fontWeight: 'medium'
                                 }} shadow={'3'}>
-                                Week
+                                7 Days
                             </Center></Pressable>
                         <Pressable
                             onPress={() => setDate("Today")}
@@ -228,7 +228,7 @@ const NewCampaign = () => {
                                     color: date === "Today" ? 'warmGray.50' : 'muted.700',
                                     fontWeight: 'medium'
                                 }} shadow={'3'}>
-                                Today
+                                One Day
                             </Center>
                         </Pressable>
                     </Stack>
@@ -242,7 +242,7 @@ const NewCampaign = () => {
                 }} />
 
                 {/* ------------------------------------------------------- */}
-                {/* period box */}
+                {/* platform box */}
                 {/* -------------- */}
                 <Box w={"98%"} shadow={1} alignSelf="center" >
                     <Text textAlign={"right"} m={4} fontSize={16} color="coolGray.800" _dark={{
