@@ -7,12 +7,13 @@ import SingUp from "./app/screens/SingUp";
 import Campaigns from "./app/screens/Campaigns";
 import DefScreen from "./app/screens/DefScreen";
 import CampaignDetails from "./app/screens/CampaignDetails";
+import NewCampaign from "./app/screens/NewCampaign";
 
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <CampaignDetails />
+      <NewCampaign />
     </NativeBaseProvider>
   );
 }

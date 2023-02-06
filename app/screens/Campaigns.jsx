@@ -1,4 +1,4 @@
-import { Box, Icon, Heading, HStack, Text, Center, Stack, Pressable } from "native-base";
+import { Box, Icon, Heading, Fab, HStack, Text, Center, Stack, Pressable } from "native-base";
 import React, { useState } from 'react'
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
@@ -69,16 +69,13 @@ const Campaigns = ({ title, data }) => {
 
     return <Box safeArea p={1} width={"100%"} height="100%"
     >
-        <HStack mt="3" ml={3} mr="3" justifyContent="space-between">
-            <Pressable bg={"success.600"} rounded="100" w="10" h="10" alignItems={"center"} justifyContent="center" shadow={"1"}
-                onPress={() => console.log("pressed nnew")}>
-                <Icon color="white" as={AntDesign} name="plus" size="4" />
-            </Pressable>
-            <Heading fontSize="lg" pb="3"  >
-                الــحــمـــلات
-            </Heading>
+        <Fab top={10} renderInPortal={false} bg="success.600" shadow={2} placement="top-left" size="sm" icon={<Icon color="white" as={AntDesign} name="plus" size="4" />} />
 
-        </HStack>
+
+        <Heading mx="4" textAlign={"right"} fontSize="lg" pb="3"  >
+            الــحــمـــلات
+        </Heading>
+
 
         <HStack justifyContent="flex-end" mb={2}>
             {[{ name: "نشط", color: "success.400", total: "2", id: "4343dff" },
