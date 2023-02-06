@@ -293,6 +293,7 @@ const CampaignDetails = () => {
                         </Modal.Footer>
                     </Modal.Content>
                 </Modal>
+
             </ScrollView>
         </SafeAreaView>
     )
