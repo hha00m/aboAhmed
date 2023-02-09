@@ -8,12 +8,14 @@ import Campaigns from "./app/screens/Campaigns";
 import DefScreen from "./app/screens/DefScreen";
 import CampaignDetails from "./app/screens/CampaignDetails";
 import NewCampaign from "./app/screens/NewCampaign";
+import Audiences from "./app/screens/Audiences";
+import Home from "./app/screens/Home";
 
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <NewCampaign />
+      <Home />
     </NativeBaseProvider>
   );
 }

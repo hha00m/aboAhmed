@@ -1,10 +1,11 @@
 import React from 'react'
-import { Input, Icon, Image, Stack, Pressable, Button, Box, Heading, VStack, Divider, Text, Avatar } from "native-base";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Input, Icon, Stack, Select, CheckIcon, Pressable, Button, Box, Heading, VStack, Divider, Text, Avatar } from "native-base";
+import { MaterialIcons, AntDesign } from "@expo/vector-icons";
 import { TouchableOpacity } from 'react-native';
 
 const SingUp = () => {
     const [show, setShow] = React.useState(false);
+    const [service, setService] = React.useState("");
 
     return (
         <>
@@ -65,6 +66,47 @@ const SingUp = () => {
                             <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="muted.400" />
                         </Pressable>} placeholder="تاكيد كلمة المرور" />
 
+                    <Select selectedValue={service}
+                        accessibilityLabel="المحافظة"
+                        zIndex={199}
+                        borderColor={"white"}
+                        bgColor={"light.100"}
+                        placeholder="المحافظة"
+                        _selectedItem={{
+                            bg: "teal.600",
+                            endIcon: <CheckIcon size="5" />
+                        }} size="lg"
+                        w={{
+                            base: "85%",
+                            md: "25%"
+                        }}
+                        onValueChange={itemValue => setService(itemValue)}>
+                        <Select.Item label="UX Research" value="ux" />
+                        <Select.Item label="Web Development" value="web" />
+                        <Select.Item label="Cross Platform Development" value="cross" />
+                        <Select.Item label="UI Designing" value="ui" />
+                        <Select.Item label="Backend Development" value="backend" />
+                    </Select>
+                    <Select selectedValue={service}
+                        accessibilityLabel="المنطقة"
+                        borderColor={"white"}
+                        bgColor={"light.100"}
+                        placeholder="المنطقة"
+                        _selectedItem={{
+                            bg: "teal.600",
+                            endIcon: <CheckIcon size="5" />
+                        }} size="lg"
+                        w={{
+                            base: "85%",
+                            md: "25%"
+                        }}
+                        onValueChange={itemValue => setService(itemValue)}>
+                        <Select.Item label="UX Research" value="ux" />
+                        <Select.Item label="Web Development" value="web" />
+                        <Select.Item label="Cross Platform Development" value="cross" />
+                        <Select.Item label="UI Designing" value="ui" />
+                        <Select.Item label="Backend Development" value="backend" />
+                    </Select>
                     <Button
                         size="lg"
                         // isDisabled

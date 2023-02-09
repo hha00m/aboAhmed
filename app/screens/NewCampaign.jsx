@@ -87,8 +87,8 @@ const NewCampaign = () => {
                         <FormControl isRequired w="80%" maxW="300px">
                             <FormControl.Label alignSelf={"flex-end"}>اسم الحملة</FormControl.Label>
                             <Input textAlign={"right"} placeholder="اسم الحملة" />
-                            <FormControl.HelperText leftIcon={<WarningOutlineIcon size="xs" />}>
-                                Try different from previous passwords.
+                            <FormControl.HelperText alignSelf={"flex-end"} leftIcon={<WarningOutlineIcon size="xs" />}>
+                                اختر اسم مناسب للحملة لكي تستطيع الوصول لها بسهولة
                             </FormControl.HelperText>
                         </FormControl>
                         <Divider my={3} w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
@@ -98,15 +98,14 @@ const NewCampaign = () => {
                             <TextArea placeholder="نص الرسالة "
                                 h={20} textAlign="right"
                             />
-                            <FormControl.HelperText leftIcon={<WarningOutlineIcon size="xs" />}>
-                                Try different from previous passwords.
-                            </FormControl.HelperText>
+                            <FormControl.HelperText alignSelf={"flex-end"} leftIcon={<WarningOutlineIcon size="xs" />}>
+                                ضع هنا مضمون الرسالة المطلوب ايصالها للجمهور                            </FormControl.HelperText>
                         </FormControl>
                     </Box>
                     <Divider my={3} w={"90%"} alignSelf="center" bg={"muted.50"} thickness="0.5" />
                     <Box alignItems="center">
                         <FormControl isRequired isInvalid w="80%" maxW="300px">
-                            <FormControl.Label> محتوى الرسالة</FormControl.Label>
+                            <FormControl.Label alignSelf={"flex-end"}> تحميل صور للرسالة</FormControl.Label>
                             <HStack m={4} justifyContent={"space-around"}>
                                 <Pressable>
                                     <Box w={20} h={20} bg="muted.100" justifyContent={"center"} alignItems="center">
@@ -149,11 +148,11 @@ const NewCampaign = () => {
                         <Icon m={2} as={AntDesign} name="creditcard" size="lg" />
                         <FormControl w="38%"  >
                             <FormControl.Label alignSelf={"flex-end"}>المبلغ</FormControl.Label>
-                            <Input value='80' size={"2xl"} h="12" />
+                            <Input value='80' size={"2xl"} h="10" />
                         </FormControl>
                         <FormControl w="38%"  >
                             <FormControl.Label alignSelf={"flex-end"}> نوع الانفاق</FormControl.Label>
-                            <Select size={'2xl'} h="12" selectedValue={service} _selectedItem={{
+                            <Select size={'xl'} h="10" selectedValue={service} _selectedItem={{
                                 bg: "muted.200",
                                 endIcon: <CheckIcon size="5" />
                             }} onValueChange={itemValue => setService(itemValue)}>
@@ -251,9 +250,11 @@ const NewCampaign = () => {
                         منصة النشر
                     </Text>
                     <Divider mb={3} width="95%" alignSelf={"center"} />
-                    <HStack flexDirection={"row-reverse"} justifyContent="space-around">
+                    <HStack mx={5} >
                         <Radio.Group
-                            name="myRadioGroup" accessibilityLabel="favorite number"
+                            // justifyContent="space-around"
+                            name="myRadioGroup"
+                            accessibilityLabel="favorite number"
                             value={value} onChange={nextValue => {
                                 setValue(nextValue);
                             }}>
@@ -263,14 +264,10 @@ const NewCampaign = () => {
                             <Radio value="two" my={1}>
                                 Viber
                             </Radio>
-                        </Radio.Group>
-                        <Radio.Group name="myRadioGroup" accessibilityLabel="favorite number" value={value} onChange={nextValue => {
-                            setValue(nextValue);
-                        }}>
-                            <Radio value="one" my={1}>
+                            <Radio value="three" my={1}>
                                 SMS
                             </Radio>
-                            <Radio value="two" my={1}>
+                            <Radio value="four" my={1}>
                                 All
                             </Radio>
                         </Radio.Group>

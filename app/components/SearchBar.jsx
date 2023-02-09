@@ -14,7 +14,8 @@ const SearchBar = () => {
             ><Icon ml="2" size="xl" color="black"
                 as={<Ionicons name="ios-filter-outline"
                 />}
-                /></Box>
+                />
+            </Box>
         </Pressable>
         <VStack w="80%"
             alignSelf="center"
