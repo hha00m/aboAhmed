@@ -15,7 +15,7 @@ import Home from "./app/screens/Home";
 export default function App() {
   return (
     <NativeBaseProvider>
-      <Home />
+      <Audiences />
     </NativeBaseProvider>
   );
 }
